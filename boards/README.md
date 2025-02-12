@@ -1,13 +1,8 @@
-# Waveshare ESP32S3 Zero
+# Waveshare ESP32S3 Zero Custom PIO Board
 
-- `"-DARDUINO_WAVESHARE_ESP32S3_ZERO"` -> arduino cli name
-- `"-DARDUINO_USB_MODE=0"` ->
-- `"-DARDUINO_USB_CDC_ON_BOOT=1"`
-- `"-DARDUINO_RUNNING_CORE=1"`
-- `"-DARDUINO_EVENT_RUNNING_CORE=1"`
-- `"-DBOARD_HAS_PSRAM"`
+## Build Flag Info
 
-| Build Flag                        | Meaning                 |
+| Build Flag                        | Context                 |
 | --------------------------------- | ----------------------- |
 | `DARDUINO_WAVESHARE_ESP32S3_ZERO` | Name for Arduino CLI    |
 | `DARDUINO_USB_MODE`               | 0=USB-OTG (TinyUSB), 1=Hardware CDC & JTAG |
@@ -16,9 +11,14 @@
 | `DARDUINO_EVENT_RUNNING_CORE`     | 0=core 0, 1=core 1      |
 | `BOARD_HAS_PSRAM`                 | 1=has PSRAM, 0=no PSRAM |
 
-`use_1200bps_touch` means that tool will pulse serial port at 1200bps, then watch. Helps to auto-select port. Requires `wait_for_upload_port` to be true, and `require_upload_port` to be true.
+## Upload Flags Info
 
-# Reference
+`use_1200bps_touch` means that tool will pulse serial port at 1200bps, then watch. Helps to auto-select port.
+
+- Requires `wait_for_upload_port` to be true
+- Requires `require_upload_port` to be true.
+
+## Reference
 
 - [Waveshare ESP32S3 Zero](https://www.waveshare.com/product/esp32-s3-zero.htm)
 - [Waveshare ESP32S3 Zero Wiki](https://www.waveshare.com/wiki/ESP32-S3-Zero)
